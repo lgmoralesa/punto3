@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :classrooms
   
   resources :programs
+  
+  resources :libraries
 end
