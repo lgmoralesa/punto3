@@ -46,6 +46,6 @@ class LibrariesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def library_params
-      params.fetch(:library, {})
+      params.require(:library).permit(:name, :location, :open)
     end
 end

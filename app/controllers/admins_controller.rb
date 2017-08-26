@@ -46,6 +46,6 @@ class AdminsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def admin_params
-      params.fetch(:admin, {})
+      params.require(:admin).permit(:name, :email, :age)
     end
 end
